@@ -1,2 +1,2 @@
-$clear @s $(block) $(need)
-tellraw @s [{"text":"HandFill complete. Placed and consumed "},{"score":{"name":"@s","objective":"hf_need"}},{"text":" blocks."}]
+$execute store result score @s hf_consumed run clear @s $(block) $(need)
+tellraw @s [{"text":"[HF] CONSUMED: "},{"score":{"name":"@s","objective":"hf_consumed"}},{"text":" of requested "},{"score":{"name":"@s","objective":"hf_need"}},{"text":"; fill complete."}]

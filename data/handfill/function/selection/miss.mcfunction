@@ -1,0 +1,2 @@
+scoreboard players set @s hf_mode 0
+tellraw @s [{"text":"[HF] RAY MISS: no block within 6 blocks; steps="},{"score":{"name":"@s","objective":"hf_ray"}},{"text":". Aim at a block and right-click again."}]

@@ -1,6 +1,5 @@
-scoreboard players enable @a hf_pos1
-scoreboard players enable @a hf_pos2
-scoreboard players enable @a hf_fill
-execute as @a[scores={hf_pos1=1..}] run function handfill:selection/first
-execute as @a[scores={hf_pos2=1..}] run function handfill:selection/second
-execute as @a[scores={hf_fill=1..}] run function handfill:fill/start
+execute as @a[scores={hf_state=2}] at @s run function handfill:tools/upgrade_fill
+execute as @a unless score @s hf_state matches 3 run function handfill:tools/give
+execute as @a[scores={hf_use1=1..}] at @s run function handfill:tools/corner_1
+execute as @a[scores={hf_use2=1..}] at @s run function handfill:tools/corner_2
+execute as @a[scores={hf_use4=1..}] at @s run function handfill:tools/fill
